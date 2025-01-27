@@ -1,0 +1,63 @@
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useRouter } from 'expo-router';
+
+const SignIn = () => {
+  const router = useRouter();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSignIn = () => {
+    console.log('Sign In:', { email, password });
+    // Implement your authentication logic here
+  };
+
+  return (
+    <SafeAreaView className="h-full bg-emerald-50">
+      <View className="flex-1 justify-center px-6">
+        <Text className="text-center text-3xl font-bold text-emerald-800 mb-8">
+          Sign In
+        </Text>
+
+        <View className="space-y-4">
+          <TextInput
+            placeholder="Email"
+            value={email}
+            onChangeText={setEmail}
+            className="border border-gray-300 rounded-md p-4"
+            keyboardType="email-address"
+            autoCapitalize="none"
+          />
+          <TextInput
+            placeholder="Password"
+            value={password}
+            onChangeText={setPassword}
+            className="border border-gray-300 rounded-md p-4"
+            secureTextEntry
+          />
+        </View>
+
+        <TouchableOpacity
+          onPress={handleSignIn}
+          className="bg-emerald-800 mt-6 rounded-md p-4"
+        >
+          <Text className="text-center text-white text-lg font-semibold">
+            Sign In
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => router.push('/auth/SignUp')}
+          className="mt-4"
+        >
+          <Text className="text-center text-emerald-800">
+            Don't have an account? Sign Up
+          </Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
+  );
+};
+
+export default SignIn;
