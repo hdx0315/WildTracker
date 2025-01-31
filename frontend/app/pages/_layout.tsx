@@ -24,6 +24,30 @@ const PagesLayout = () => {
             headerShown: false,
           }}
         />
+        <Stack.Screen
+          name="Dashboard"
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="IncidentMap"
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="ReportIncident"
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Resources"
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack>
       <StatusBar
         backgroundColor="#065F46"

@@ -72,44 +72,43 @@ export default function Dashboard() {
 
           <View className='mt-6'>
             <Text className="text-xl font-bold text-emerald-800 mb-4">Educational Resources</Text>
-            <View className='flex flex-row justify-between gap-4'>
+            <View className='flex flex-row justify-between'>
+
               <ImageBackground
                 source={img1}
-                className='w-36 h-56 rounded-2xl'
+                className='w-32 h-56 rounded-2xl'
                 imageStyle={{ borderRadius: 12 }}
               >
-                <View className='flex align-bottom h-full p-2'>
-                  <Text className="text-base text-white font-bold">Leopard Conservation</Text>
-                </View>
+                <TouchableOpacity className='flex justify-end h-full p-2 pb-6'>
+                  <Text className="text-base text-white font-bold bg-black/50 rounded-xl p-1">Leopard Conservation</Text>
+                </TouchableOpacity>
               </ImageBackground>
+
               <ImageBackground
                 source={img2}
-                className='w-36 h-56 rounded-2xl'
+                className='w-32 h-56 rounded-2xl'
                 imageStyle={{ borderRadius: 12 }}
               >
-                <View className='flex align-bottom h-full p-2'>
-                  <Text className="text-base text-white font-bold">Resource 2</Text>
-                </View>
+                <TouchableOpacity className='flex justify-end items-center h-full p-2 pb-6'>
+                  <Text className="text-base text-white font-bold bg-black/50 rounded-xl p-1">Leopard Conservation</Text>
+                </TouchableOpacity>
               </ImageBackground>
+
               <ImageBackground
                 source={img3}
-                className='w-36 h-56 rounded-2xl'
+                className='w-32 h-56 rounded-2xl'
                 imageStyle={{ borderRadius: 12 }}
               >
-                <View className='flex align-bottom h-full p-2'>
-                  <Text className="text-base text-white font-bold">Resource 3</Text>
-                </View>
+                <TouchableOpacity className='flex justify-end h-full p-2 pb-6'  onPress={() => router.push('/pages/IncidentMap')} >
+                  <Text className="text-base text-white font-bold bg-black/50 rounded-xl p-1">View All Resources</Text>
+                </TouchableOpacity>
               </ImageBackground>
-              <ImageBackground
-                source={img4}
-                className='w-36 h-56 rounded-2xl'
-                imageStyle={{ borderRadius: 12 }}
-              >
-                <View className='flex align-bottom h-full p-2'>
-                  <Text className="text-base text-white font-bold">Resource 4</Text>
-                </View>
-              </ImageBackground>
+              
             </View>
+          </View>
+
+          <View className='mt-6'>
+            <Text className="text-xl font-bold text-emerald-800 mb-4">Latest Updates</Text>
           </View>
         </View>
       </ScrollView>
