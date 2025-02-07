@@ -1,11 +1,16 @@
 
+// frontend/app/pages/ReportIncident.tsx
 import { useState, useEffect } from 'react';
 import { View, TextInput, Button, Image,Text } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Location from 'expo-location';
-//import { storage, firestore } from '../../../backend/firebase/config';
-import { createIncident, uploadFile } from '../../../backend/firebase/utils';
-import type { Incident } from '../../../backend/firebase/types';
+//import { storage, db } from '../backend/firebase/config';
+//import { createIncident, uploadFile } from '../backend/firebase/utils';
+//import type { Incident } from '../backend/firebase/types';
+import { storage, db } from '../../backend/firebase/config';
+import { createIncident, uploadFile } from '../../backend/firebase/utils';
+import {Incident } from '../../backend/firebase/types';
+
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export const ReportIncident = () => {
